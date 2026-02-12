@@ -10,38 +10,73 @@ background:#ffd6e8;
 font-family:Arial;
 text-align:center;
 margin:0;
-padding:20px;
+padding:40px;
 }
 
 .card{
 background:white;
 border-radius:20px;
-padding:20px;
-margin:20px auto;
+padding:25px;
+margin:auto;
 max-width:350px;
-box-shadow:0 0 10px rgba(0,0,0,.1);
+box-shadow:0 0 15px rgba(0,0,0,.15);
 }
 
-input,button{
-padding:10px;
+input{
+padding:12px;
 border-radius:10px;
-border:none;
+border:1px solid #ccc;
 font-size:16px;
+width:80%;
 }
 
 button{
+margin-top:15px;
+padding:10px 25px;
+border-radius:10px;
+border:none;
+font-size:16px;
 background:pink;
 }
 
-img{
-width:100%;
-border-radius:15px;
-margin-top:10px;
-}
+.hidden{display:none;}
 </style>
 </head>
 
 <body>
 
 <div id="login" class="card">
-<h2>Ingresa
+<h2>Ingresa nuestra fecha 💕</h2>
+<input id="p" type="text" placeholder="05/11/2023">
+<br>
+<button onclick="go()">Entrar</button>
+</div>
+
+<div id="love" class="hidden card">
+
+<p>
+Te amo muchísimo mi niña bella, espero y estés muy feliz hoy y te la pases de maravilla, ya tienes 16 añotessss te amo demasiado eres la mejor persona q conocí y conoceré, no hay nadie mejor q tú en todo el mundo. Gracias por estar conmigo y demostrarme q me amas, espero q este día esté lleno de mucha alegría porq te lo mereces y te deseo lo mejor hoy y siempre guapa, me encantas muchísimo muchísimo me gustas muchoooooo enserio amooorrr, FELIZ CUMPLEAÑOS A LA NIÑA MÁS HERMOSA DE EL MUNDO
+</p>
+
+</div>
+
+<!-- Música Birds of a Feather -->
+<iframe id="music" class="hidden"
+src="https://www.youtube.com/embed/VmG0k4n2b2Q?autoplay=1&loop=1&playlist=VmG0k4n2b2Q"
+allow="autoplay"
+style="display:none"></iframe>
+
+<script>
+function go(){
+if(document.getElementById("p").value=="05/11/2023"){
+document.getElementById("login").style.display="none";
+document.getElementById("love").style.display="block";
+document.getElementById("music").classList.remove("hidden");
+}else{
+alert("Fecha incorrecta 😢");
+}
+}
+</script>
+
+</body>
+</html>
